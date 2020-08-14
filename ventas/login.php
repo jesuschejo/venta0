@@ -1,4 +1,5 @@
 <?php
+
 include_once "config.php";
 include_once "entidades/usuario.php";
 
@@ -15,10 +16,11 @@ if ($_POST) {
         $_SESSION["nombre"] = $entidadUsuario->nombre;
 
         //Redireccionamos a la home
-        header("location:index.php");
+        header("location:index.php");  
     } else {
         //Si no es correcto la clave o el usuario mostrar en pantalla "Usuario o clave incorrecto"
         $msg = "Usuario o clave incorrecto";
+        header("location:index.php");
     }
 }
 
@@ -66,9 +68,9 @@ if ($_POST) {
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Bienvenido</h1>
                   </div>
+
                   <form method="POST" action="" class="user">
-				          	<div class="alert alert-danger" role="alert">
-				          	</div>
+
                     <div class="form-group">
                       <input type="text" class="form-control form-control-user" id="txtUsuario" name="txtUsuario" aria-describedby="emailHelp" placeholder="Usuario" value="jchejo">
                     </div>
@@ -85,6 +87,7 @@ if ($_POST) {
                       Iniciar sesion
                     </button>
                   </form>
+
                   <hr>
                   <div class="text-center">
                     <a class="small" href="forgot-password.html">Olvidaste la clave?</a>
