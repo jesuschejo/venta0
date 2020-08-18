@@ -40,9 +40,15 @@ class Venta
     public function insertar()
     {
         $mysqli = new mysqli(Config::BBDD_HOST, Config::BBDD_USUARIO, Config::BBDD_CLAVE, Config::BBDD_NOMBRE);
-        $sql = "INSERT INTO ventas (fk_idcliente, fk_idproducto, fecha, cantidad, preciounitario, total) 
-                VALUES 
-               (" . $this->fk_idcliente . ",
+        $sql = "INSERT INTO ventas (
+            fk_idcliente, 
+            fk_idproducto, 
+            fecha, 
+            cantidad, 
+            preciounitario, 
+            total
+            ) VALUES (
+                " . $this->fk_idcliente . ",
                 " . $this->fk_idproducto . ", 
                 '" . $this->fecha . "', 
                 " . $this->cantidad . ",
@@ -109,7 +115,13 @@ class Venta
     public function obtenerTodos()
     {
         $mysqli = new mysqli(Config::BBDD_HOST, Config::BBDD_USUARIO, Config::BBDD_CLAVE, Config::BBDD_NOMBRE);
-        $sql = "SELECT idventa, fk_idcliente, fk_idproducto, fecha, cantidad, preciounitario, total FROM ventas";
+        $sql = "SELECT idventa, 
+                       fk_idcliente, 
+                       fk_idproducto, 
+                       fecha, 
+                       cantidad, 
+                       preciounitario, 
+                       total FROM ventas";
         if (!$resultado = $mysqli->query($sql)) {
             printf("Error en query: %s\n", $mysqli->error . " " . $sql);
         }
@@ -217,5 +229,8 @@ class Venta
         $this->fk_idproducto = $fila["fk_idproducto"];
         return ($this);
     }
+
+    //borrar lo q sige
+ 
 
 }

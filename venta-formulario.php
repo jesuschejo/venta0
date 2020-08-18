@@ -71,8 +71,10 @@ include_once "header.php";
                   <?php endforeach; ?>
                 </select>
               </div>
+
               <div class="col-6 form-group">
                 <label for="txtNombre">Producto:</label>
+                
                 <select onchange="fBuscarPrecioUnitario();" required class="form-control" name="lstProducto" id="lstProducto">
                   <option value="" disabled selected>Seleccionar</option>
                   <?php foreach ($aProductos as $producto) : ?>
