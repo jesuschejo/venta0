@@ -41,7 +41,7 @@ include_once "header.php";
                 <div class="col-12 mb-3">
                     <a href="producto-listado.php" class="btn btn-primary mr-2">Listado</a>
                     <a href="producto-formulario.php" class="btn btn-primary mr-2">Nuevo</a>
-                    <button type="" class="btn btn-success mr-2" id="btnGuardar" name="btnGuardar">Guardar</button>
+                    <button type="submit" class="btn btn-success mr-2" id="btnGuardar" name="btnGuardar">Guardar</button>
                     <button type="submit" class="btn btn-danger" id="btnBorrar" name="btnBorrar">Borrar</button>
                 </div>
             </div>
@@ -50,6 +50,7 @@ include_once "header.php";
                     <label for="txtNombre">Nombre:</label>
                     <input type="text" required="" class="form-control" name="txtNombre" id="txtNombre" value="<?php echo $producto->nombre ?>">
                 </div>
+                
                 <div class="col-6 form-group">
                     <label for="txtNombre">Tipo de producto:</label>
                     <select name="lstTipoProducto" required="" id="lstTipoProducto" class="form-control">
