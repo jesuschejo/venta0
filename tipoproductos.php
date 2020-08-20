@@ -22,13 +22,12 @@ include_once "header.php";
                 <th>Nombre:</th>
                 <th>Acciones:</th>
             </tr>
-            <?php foreach ($aTipoProductos as $tipo) : ?>
+            <?php foreach ($aTipoProductos as $tipo) { ?>
                 <tr>
                     <td><?php echo $tipo->nombre; ?></a></td>
-                    <td style="padding-left: 40px;"><a href="tipoproducto-formulario.php?id=<?php echo $tipo->idtipoproducto; ?>"><i class="fas fa-edit"></i></a></td>
-
+                    <td><a href="tipoproducto-formulario.php?id=<?php echo $tipo->idtipoproducto; ?>"><i class="fas fa-edit"></i></a></td>
                 </tr>
-                <?php endforeach; ?>
+                <?php } ?>
              </table>
              </div>
 

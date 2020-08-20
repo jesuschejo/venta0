@@ -1,5 +1,5 @@
-
 <?php
+
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 ini_set('error_reporting', E_ALL);
@@ -51,6 +51,7 @@ include_once "header.php";
             <h1 class="h3 mb-4 text-gray-800">Venta</h1>
             <div class="row">
               <div class="col-12 mb-3">
+              <a href="venta-listado.php" class="btn btn-primary mr-2">Listado</a>
                 <a href="venta-formulario.php" class="btn btn-primary mr-2">Nuevo</a>
                 <button type="submit" class="btn btn-success mr-2" id="btnGuardar" name="btnGuardar">Guardar</button>
                 <button type="submit" class="btn btn-danger" id="btnBorrar" name="btnBorrar">Borrar</button>
@@ -87,29 +88,33 @@ include_once "header.php";
                   <?php endforeach; ?>
                 </select>
 
-                </select>
+                
               </div>
             </div>
+
             <div class="row">
-              <div class="col-4 form-group">
+              <div class="col-6 form-group">
                 <label for="txtFecha">Fecha:</label>
                 <input type="date" required class="form-control" name="txtFecha" id="txtFecha" value="<?php echo date_format(date_create($venta->fecha), "Y-m-d");  ?>">
               </div>
-              <div class="col-4 form-group">
+              <div class="col-6 form-group">
                 <label for="txtHora">Hora:</label>
                 <input type="time" required class="form-control" name="txtHora" id="txtHora" value="<?php echo date_format(date_create($venta->fecha), "H:i");  ?>">
               </div>
             </div>
+
             <div class="row">
               <div class="col-6 form-group">
                 <label for="txtCantidad">Cantidad:</label>
                 <input type="number" onchange="fCalcularTotal();" required class="form-control" name="txtCantidad" id="txtCantidad" value="<?php echo $venta->cantidad ?>">
               </div>
+
               <div class="col-6 form-group">
                 <label for="txtPrecioUnitario">Precio Unitario:</label>
                 <input type="text" required class="form-control" name="txtPrecioUnitario" id="txtPrecioUnitario" value="<?php echo $venta->preciounitario ?>">
               </div>
             </div>
+
             <div class="row">
               <div class="col-4 form-group">
                 <label for="txtTotal">Total:</label>

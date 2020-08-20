@@ -64,7 +64,10 @@ include_once "header.php";
                     <label for="txtCorreo">Correo:</label>
                     <input type="" required="" class="form-control" name="txtCorreo" id="txtCorreo" value="<?php echo $cliente->correo ?>">
                 </div>
-                <div class="col-6 form-group">
+                
+            </div>
+            <div class="row">
+            <div class="col-10 form-group">
                     <label for="txtDomicilio">Domicilio:</label>
                     <textarea id="ckeditor" class="ckeditor"></textarea>
                 </div>

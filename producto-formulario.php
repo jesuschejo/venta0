@@ -66,12 +66,12 @@ include_once "header.php";
                 </div>
               
                 <div class="col-6 form-group">
-                    <label for="txtCorreo">Cantidad:</label>
-                    <input type="" class="form-control" name="txtCantidad" id="txtCantidad" required value="<?php echo $producto->cantidad ?>">
+                    <label for="txtCantidad">Cantidad:</label>
+                    <input type="number" class="form-control" name="txtCantidad" id="txtCantidad" required value="<?php echo $producto->cantidad ?>">
                 </div>
                 <div class="col-6 form-group">
-                    <label for="txtCorreo">Precio:</label>
-                    <input type="number" class="form-control" name="txtCorreo" id="txtCorreo" required value="<?php echo $producto->precio ?>">
+                    <label for="txtPrecio">Precio:</label>
+                    <input type="text" class="form-control" name="txtPrecio" id="txtPrecio" required value="<?php echo $producto->precio ?>">
                 </div>
                 
                 <div class="col-6 form-group">

@@ -36,6 +36,7 @@ include_once "header.php";
                                     <td class="text-center"><a href="venta-formulario.php?id=<?php echo $venta->idventa; ?>"> <i class="fas fa-edit"></i></a></td>
                                 </tr>
                             <?php endforeach; ?>
+                            
                         </table>
                     </div>
                     <!-- /.container-fluid -->

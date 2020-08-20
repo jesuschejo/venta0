@@ -229,8 +229,6 @@ class Venta
         $this->fk_idproducto = $fila["fk_idproducto"];
         return ($this);
     }
-
-    //borrar lo q sige
  
 
 }
